@@ -4257,7 +4257,7 @@ When at an outline, eval the outline."
                                (require 'eros nil t))
                            (if has-cider (not (memq major-mode lispy-clojure-modes)) t))
                       (eros--eval-overlay
-                       res (cdr (lispy--bounds-dwim))))
+                       (read res) (cdr (lispy--bounds-dwim))))
                      (has-cider
                       (cider--display-interactive-eval-result
                        res (cdr (lispy--bounds-dwim))))
